@@ -73,6 +73,7 @@ cargo install tauri-cli --version "^2"
 ### 4. 构建
 
 ```bash
+git clone https://github.com/Wang-Hao-Zhe/deepseek-tauri-linux.git
 cargo tauri build
 ```
 
