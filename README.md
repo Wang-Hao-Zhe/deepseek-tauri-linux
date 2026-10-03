@@ -1,7 +1,7 @@
 # deepSeek-tauri-linux
 
 > 将 `https://chat.deepseek.com` 包装成 Linux 桌面应用的 Tauri 学习项目。
-> 本项目定位：Tauri 在 Linux 上封装 DeepSeek 网页端的完整工程实践。包含依赖配置、打包流程与已知限制。经实测，Linux 下 WebKitGTK 因  WebGL 指纹检测而无法正常使用，此记录旨在为后来者提供参考，避免重复踩坑。
+> 本项目定位：Tauri 在 Linux 上封装 DeepSeek 网页端的完整工程实践。包含依赖配置、打包流程与已知限制。经实测，Linux 下 WebKitGTK 因  WebGL 指纹检测而无法完美使用，此记录旨在为后来者提供参考，避免重复踩坑。
 
 ---
 
@@ -11,7 +11,7 @@
 
 原因如下：
 
-- **风控风险**：DeepSeek 风控系统可识别 WebKitGTK 指纹，启动后会提示“环境异常”，无法正常使用。
+- **风控风险**：DeepSeek 风控系统可识别 WebKitGTK 指纹，启动后会提示“环境异常”，无法安全使用。
 - **账号风险**：使用非官方客户端可能导致 DeepSeek 账号被临时封禁。社区已有用户因类似行为被封禁 1～3 天。
 - **功能受限**：剪贴板图片粘贴、文件拖拽上传在 WebKitGTK 下均无法正常工作。
 
@@ -29,7 +29,7 @@
 2. **参考社区项目**：注意到 [jwangkun/DeepSeek-Desktop](https://github.com/jwangkun/DeepSeek-Desktop) 基于 Pake 将网页打包为桌面应用，但其目标平台主要是 macOS 和 Windows，未覆盖 Linux。
 3. **Tauri + WebKitGTK**：在 Linux 上使用系统 WebView，理论上轻量且可行。
 4. **实际构建**：编译了数百个 Rust crate，配置了图标、分类、`.desktop` 文件。
-5. **撞上风控**：DeepSeek 检测到 WebKitGTK 指纹，判定“环境异常”，拒绝服务。
+5. **撞上风控**：DeepSeek 检测到 WebKitGTK 指纹，判定“环境异常”，可能拒绝服务。
 6. **最终发现**：Firefox 自带的 Taskbar Tabs 功能完全满足需求，且没有风控问题。
 
 本项目记录了第 3～5 步的完整配置和构建流程，希望能为后来者提供参考，避免重复踩坑。
