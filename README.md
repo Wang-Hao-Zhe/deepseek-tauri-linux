@@ -1,6 +1,7 @@
 # deepSeek-tauri-linux
 
 > 将 `https://chat.deepseek.com` 包装成 Linux 桌面应用的 Tauri 学习项目。
+> 本项目定位：Tauri 在 Linux 上封装 DeepSeek 网页端的完整工程实践，包含依赖配置、打包流程与已知限制记录。不保证在风控环境下可用，适合学习 Tauri Linux 打包流程的开发者参考。
 
 ---
 
