@@ -74,13 +74,14 @@ cargo install tauri-cli --version "^2"
 
 ```bash
 git clone https://github.com/Wang-Hao-Zhe/deepseek-tauri-linux.git
+cd ./deepseek-tauri-linux 
 cargo tauri build
 ```
 
 产物位于：
 
 ```text
-src-tauri/target/release/bundle/
+./src-tauri/target/release/bundle/
 ```
 
 包含 `.rpm`、`.deb` 和 AppImage。
