@@ -1,0 +1,42 @@
+# ---------- Rust / Cargo ----------
+# 所有 target 目录，包括根目录和 src-tauri 下的
+target/
+**/target/
+
+# 备份文件
+**/*.rs.bk
+
+# Cargo.lock 对于二进制应用建议提交，所以不忽略
+
+# ---------- Tauri 生成内容 ----------
+src-tauri/gen/
+
+# ---------- 前端 / Node ----------
+node_modules/
+dist/
+*.local
+
+# ---------- 系统文件 ----------
+.DS_Store
+Thumbs.db
+
+# ---------- IDE / 编辑器 ----------
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ---------- 日志 ----------
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ---------- 环境变量 ----------
+.env
+.env.local
+
+# ---------- 打包产物 ----------
+*.AppImage
+*.rpm
+*.deb

@@ -1,0 +1,42 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "DeepSeek",
+  "mainBinaryName": "deepseek",
+  "version": "1.0.0",
+  "identifier": "com.whz.deepseek",
+  "build": {
+    "frontendDist": "../dist"
+  },
+  "app": {
+    "windows": [
+      {
+        "title": "DeepSeek - 探索未至之境",
+        "width": 1344,
+        "height": 756,
+        "resizable": true,
+        "fullscreen": false,
+	"url": "https://chat.deepseek.com"
+      }
+    ],
+    "security": {
+      "csp": null
+    }
+  },
+  "bundle": {
+    "active": true,
+    "category": "Utility",
+    "targets": "all",
+    "shortDescription": "一个可用的，由Tauri制成的DeepSeek客户端",
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico",
+      "icons/icon.png"
+       ],
+    "android": {
+      "debugApplicationIdSuffix": ".debug"
+    }
+  }
+}
